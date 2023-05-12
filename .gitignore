@@ -35,6 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+application-mailgun.properties
 # Compiled class file
 *.class
 
