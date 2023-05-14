@@ -16,34 +16,32 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.envers.AuditOverride;
 
-@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
 @AuditOverride(forClass = BaseEntity.class)
-public class Customer extends BaseEntity {
+public class Seller extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private Long id;
+
     @Column(unique = true)
     private String email;
     private String name;
     private String password;
     private String phone;
     private LocalDate birth;
+
     private LocalDateTime verifyExpiredAt;
     private String verificationCode;
     private boolean verify;
 
-    @Column(columnDefinition = "int default 0")
-    private Integer balance;
-
-    public static Customer from(SignUpForm signUpForm) {
-        return Customer.builder()
+    public static Seller from(SignUpForm signUpForm) {
+        return Seller.builder()
                 .email(signUpForm.getEmail().toLowerCase(Locale.ROOT))
                 .password(signUpForm.getPassword())
                 .name(signUpForm.getName())

@@ -1,4 +1,4 @@
-package com.zxcv5595.cms.user.service;
+package com.zxcv5595.cms.user.service.customer;
 
 import com.zxcv5595.cms.user.domain.SignUpForm;
 import com.zxcv5595.cms.user.domain.model.Customer;
