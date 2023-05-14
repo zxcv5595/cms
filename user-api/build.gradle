@@ -16,11 +16,12 @@ configurations {
 repositories {
     mavenCentral()
 }
-ext{
-    set('springCloudVersion',"2021.0.1")
+ext {
+    set('springCloudVersion', "2021.0.1")
 }
 
 dependencies {
+    implementation(project(path: ":domain", configuration: "default"))
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
@@ -28,9 +29,9 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.12.0'
 
     compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'com.h2database:h2'
     runtimeOnly 'mysql:mysql-connector-java'
-    annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.1'

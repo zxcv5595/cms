@@ -7,8 +7,14 @@ import lombok.Getter;
 @AllArgsConstructor
 public class ErrorResponse {
 
-    private ErrorCode errorCode;
-    private int statusCode;
-    private String errorMessage;
+    private final ErrorCode errorCode;
+    private final int statusCode;
+    private final String errorMessage;
 
+
+    public ErrorResponse(ErrorCode errorCode) {
+        this.errorCode = errorCode;
+        this.statusCode = errorCode.getStatusCode().value();
+        this.errorMessage = errorCode.getDetail();
+    }
 }
