@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.zxcv5595.cms.user.domain.SignUpForm;
 import com.zxcv5595.cms.user.domain.model.Customer;
+import com.zxcv5595.cms.user.service.customer.SignUpCustomerService;
 import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
