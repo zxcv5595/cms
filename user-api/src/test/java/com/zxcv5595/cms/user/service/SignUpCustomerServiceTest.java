@@ -27,5 +27,6 @@ class SignUpCustomerServiceTest {
                 .build();
         Customer customer = signUpCustomerService.signUp(form);
         assertEquals("name", customer.getName());
+
     }
 }
