@@ -37,6 +37,7 @@ out/
 .vscode/
 user-api/src/main/resources/application-mailgun.properties
 domain/src/main/resources/application-KEY.properties
+order-api/src/main/resources/application-KEY.properties
 # Compiled class file
 *.class
 
